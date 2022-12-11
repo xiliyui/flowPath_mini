@@ -1,3 +1,5 @@
+import path from "path";
+
 const config = {
   projectName: 'flowPath_mini',
   date: '2022-12-10',
@@ -11,6 +13,17 @@ const config = {
   outputRoot: 'dist',
   plugins: [],
   defineConstants: {
+    IS_H5: process.env.TARO_ENV === "h5",
+    IS_WEAPP: process.env.TARO_ENV === 'weapp',
+    IS_PROD: process.env.NODE_ENV === 'production',
+    IS_DEV: process.env.NODE_ENV === 'development' || process.env.APP_ENV === 'dev',
+  },
+  alias: {
+    "@/utils": path.resolve(__dirname, "..", "src/utils"),
+    "@/components": path.resolve(__dirname, "..", "src/components"),
+    "@/assets": path.resolve(__dirname, "..", "src/assets"),
+    "@/services": path.resolve(__dirname, "..", "src/services"),
+    "@/config": path.resolve(__dirname, "..", "src/config")
   },
   copy: {
     patterns: [

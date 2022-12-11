@@ -17,3 +17,7 @@ declare namespace NodeJS {
   }
 }
 
+declare const IS_H5: boolean;
+declare const IS_WEAPP: boolean;
+declare const IS_PROD: boolean;
+declare const IS_DEV: boolean;
