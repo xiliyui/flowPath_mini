@@ -26,7 +26,8 @@
       "@/utils/*": ["./src/utils/*"],
       "@/assets/*": [ "./src/assets/*"],
       "@/services/*": [ "./src/services/*"],
-      "@/config/*": [ "./src/config/*"]
+      "@/config/*": [ "./src/config/*"],
+      "@/hooks/*": [ "./src/hooks/*"]
     }
   },
   "include": ["./src", "./types"],

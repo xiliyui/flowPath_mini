@@ -1,0 +1,52 @@
+.cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  :global {
+    .van-image {
+      width: 200px;
+      height: 200px;
+      margin-top: 100px;
+    }
+    .van-button {
+      width: 323px;
+      height: 88px;
+      border: 2px solid #43d5a8;
+      border-radius: 46px;
+      .van-button__text {
+        width: 112px;
+        height: 40px;
+        font-size: 28px;
+        font-family: PingFangSC, PingFangSC-Regular;
+        font-weight: 400;
+        text-align: center;
+        color: #4dd0b5;
+        line-height: 40px;
+      }
+    }
+  }
+  text {
+    &:first-of-type {
+      margin-top: 30px;
+      height: 45px;
+      font-size: 32px;
+      font-family: PingFangSC, PingFangSC-Medium;
+      font-weight: 500;
+      text-align: center;
+      color: #333333;
+      line-height: 45px;
+    }
+    &:nth-of-type(2) {
+      margin-top: 107px;
+      width: 653px;
+      height: 145px;
+      font-size: 28px;
+      font-family: PingFangSC, PingFangSC-Regular;
+      font-weight: 400;
+      text-align: center;
+      color: #333333;
+      line-height: 40px;
+    }
+  }
+}

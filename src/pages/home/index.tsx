@@ -1,20 +1,22 @@
 import { FC } from 'react'
-import Taro from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
-import { Button } from '@antmjs/vantui'
-import './index.less'
+import { CellGroup, Cell } from '@antmjs/vantui'
+import styles from './index.module.less'
 
 const Home: FC = () => {
-  const navDetails = () => {
-    Taro.navigateTo({
-      url: '/pages/details/index'
-    })
-  }
 
   return (
-    <View className='home'>
-      <Text>Hello world!</Text>
-      <Button type='info' block onClick={navDetails}>Details</Button>
+    <View className={styles.cont}>
+      <Text className={styles.title}>work flow</Text>
+      <CellGroup inset>
+        <Cell
+          isLink
+          title='出门'
+          value='开始'
+          linkType='navigateTo'
+          url='/pages/workFlow/index'
+        />
+      </CellGroup>
     </View>
   )
 }
