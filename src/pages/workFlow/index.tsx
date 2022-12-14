@@ -1,11 +1,32 @@
 import { FC, useState, useEffect } from 'react'
-import Taro from '@tarojs/taro'
+import Taro, { getCurrentInstance } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import { Steps, Button } from '@antmjs/vantui'
 import useCountDown from '@/hooks/countdown'
+import { queryDetails } from '@/services/workFlow'
 import styles from './index.module.less'
 
+const initSteps = [
+  {
+    displayName: '步骤一',
+    description: '描述信息',
+  },
+  {
+    displayName: '步骤二',
+    description: '描述信息',
+  },
+  {
+    displayName: '步骤三',
+    description: '描述信息',
+  },
+  {
+    displayName: '步骤四',
+    description: '描述信息',
+  },
+]
+
 const WorkFlow: FC = () => {
+  const [steps, setSteps] = useState(initSteps)
   const [active, setActive] = useState(0)
   const [activeIcon, setActiveIcon] = useState('circle')
   const [activeColor, setActiveColor] = useState('#07c160')
@@ -13,24 +34,15 @@ const WorkFlow: FC = () => {
   const [btnDisabled, setBtnDisabled] = useState(false)
   const { count, run, clear } = useCountDown(60)
 
-  const steps = [
-    {
-      displayName: '步骤一',
-      description: '描述信息',
-    },
-    {
-      displayName: '步骤二',
-      description: '描述信息',
-    },
-    {
-      displayName: '步骤三',
-      description: '描述信息',
-    },
-    {
-      displayName: '步骤四',
-      description: '描述信息',
-    },
-  ]
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const fetchData = async () => {
+    const workflowId = getCurrentInstance().router?.params.id;
+    const res: any = await queryDetails({ workflowId: workflowId as string, userId: '' })
+    setSteps(res?.steps)
+  }
 
   const nextStep = () => {
     setActive(active + 1)

@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0 32px;
+  .titleBox {
+    display: flex;
+    align-items: center;
+    .userInfo {
+      margin-left: 30px;
+      .name {
+        font-size: 34px;
+        font-weight: 400;
+        color: #333333;
+        font-family: PingFangSC, PingFangSC-Regular;
+      }
+      .phone {
+        font-weight: 400;
+        color: #666666;
+        font-size: 28px;
+        margin-top: 10px;
+        font-family: PingFangSC, PingFangSC-Regular;
+      }
+    }
+  }
+  .cardBox {
+    display: flex;
+    margin-top: 42px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cellBox {
+    margin-top: 40px;
+    .cellTitle {
+      font-size: 32px;
+      font-weight: 500;
+      color: #333333;
+      font-family: PingFangSC, PingFangSC-Medium;
+    }
+  }
+}
+
+.card {
+  position: relative;
+  .name {
+    left: 30px;
+    top: 52px;
+    font-size: 32px;
+    font-weight: 500;
+    color: #548e7a;
+    position: absolute;
+    font-family: PingFangSC, PingFangSC-Medium;
+    &:last-child {
+      color: #346870;
+    }
+  }
+}

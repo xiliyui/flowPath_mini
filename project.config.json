@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "flowPath_mini",
   "description": "flow path mini app",
-  "appid": "touristappid",
+  "appid": "wx69511ed152a6e3e5",
   "setting": {
     "urlCheck": true,
     "es6": false,

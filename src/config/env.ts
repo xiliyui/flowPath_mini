@@ -1,7 +1,7 @@
 import Taro from "@tarojs/taro"
 
 const baseUrlOptions = {
-  develop: 'https://api',
+  develop: 'http://127.0.0.1:8000',
   trial: 'https://api',
   release: 'https://api'
 }
