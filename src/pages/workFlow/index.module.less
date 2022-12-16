@@ -1,19 +1,29 @@
-.step {
+.cont {
   display: flex;
   flex-direction: column;
-  padding: 0 32rpx;
-  .title {
-    font-size: 48rpx;
-  }
-  :global {
-    .van-button {
-      margin-top: 20rpx;
-      width: 200rpx;
-      height: 200rpx;
-      box-sizing: border-box;
-      border-radius: 100rpx;
-      .van-button__text {
-        font-size: 48rpx;
+  height: 100vh;
+  .step {
+    flex: 1;
+    height: calc(100vh - 100rpx);
+    display: flex;
+    flex-direction: column;
+    padding: 0 32rpx;
+    .desc {
+      font-size: 32rpx;
+    }
+    :global {
+      .van-button {
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-100rpx, -100rpx);
+        width: 200rpx;
+        height: 200rpx;
+        box-sizing: border-box;
+        border-radius: 100rpx;
+        .van-button__text {
+          font-size: 48rpx;
+        }
       }
     }
   }

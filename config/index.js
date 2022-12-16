@@ -24,6 +24,7 @@ const config = {
     "@/assets": path.resolve(__dirname, "..", "src/assets"),
     "@/services": path.resolve(__dirname, "..", "src/services"),
     "@/config": path.resolve(__dirname, "..", "src/config"),
+    "@/components": path.resolve(__dirname, "..", "src/components"),
     "@/hooks": path.resolve(__dirname, "..", "src/hooks")
   },
   copy: {
